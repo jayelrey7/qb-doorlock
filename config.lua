@@ -1,14 +1,14 @@
 Config = {}
 
 Config.CommandPermission = 'god' -- permission level for creating new doors
-Config.AdminAccess = false -- Enable admins to unlock any door
+Config.AdminAccess = true -- Enable admins to unlock any door
 Config.AdminPermission = 'god' -- The permission needed to get AdminAccess if it is enabled
 Config.Warnings = false -- if true it will show warnings in the console when certain requirements aren't met
 Config.FallbackDistance = 3.0 -- Distance to fall back on when it is not set
 Config.EnableSounds = true -- Enable sounds when unlocking/locking doors (doors triggered by scripts can have the sound manually disabled)
 Config.EnableAnimation = true -- Enable the animation when unlocking/locking doors (doors triggered by scripts can have the animation manually disabled)
 Config.SaveDoorDialog = true -- Saves the door dialogue popup between door saves
-Config.PersistentDoorStates = false -- Persists the door state between server restarts
+Config.PersistentDoorStates = true -- Persists the door state between server restarts
 Config.PersistentSaveInternal = 60000 -- How often door states are saved to the file system, in miliseconds. 
 
 Config.ChangeColor = false -- Change the color of the box of the popup text based on if it is locked or not
@@ -50,13 +50,13 @@ Config.DoorList['configname-identifier'] = {
 
 Config.DoorStates = {}
 Config.DoorList = {
-	{
+	--[[{
 		objName = 'hei_v_ilev_bk_gate2_pris',
 		objCoords  = vec3(261.83, 221.39, 106.41),
 		textCoords = vec3(261.83, 221.39, 106.41),
 		authorizedJobs = { 'police' },
 		objYaw = -110.0,
-		locked = true,
+		locked = false,
 		pickable = false,
 		distance = 1.5,
 	},
@@ -67,7 +67,7 @@ Config.DoorList = {
 		textCoords = vec3(252.98, 220.65, 101.8),
 		authorizedJobs = { 'police' },
 		objYaw = 160.0,
-		locked = true,
+		locked = false,
 		pickable = false,
 		distance = 1.5
 	},
@@ -78,10 +78,10 @@ Config.DoorList = {
 		textCoords = vec3(261.68, 215.62, 101.81),
 		authorizedJobs = { 'police' },
 		objYaw = -110.0,
-		locked = true,
+		locked = false,
 		pickable = false,
 		distance = 1.5
-	},
+	},--]]
 	-- Paleto Door 1 opened with security card A
 	{
 		objName = 'v_ilev_cbankvaulgate01',
@@ -89,7 +89,7 @@ Config.DoorList = {
 		textCoords = vec3(-105.77, 6472.59, 31.81),
 		objYaw = 45.0,
 		authorizedJobs = { 'police' },
-		locked = true,
+		locked = false,
 		pickable = false,
 		distance = 1.5
 	},
@@ -105,7 +105,7 @@ Config.DoorList = {
 		distance = 1.5
 	},
 	-- First Pacific Door opened with lockpick
-	{
+	--[[{
 		objName = 'hei_v_ilev_bk_gate_pris',
 		objCoords  = vec3(257.41, 220.25, 106.4),
 		textCoords = vec3(257.41, 220.25, 106.4),
@@ -125,7 +125,7 @@ Config.DoorList = {
 		locked = true,
 		pickable = true,
 		distance = 1.5
-	},
+	},]]--
 	-- Fleeca Door opened with lockpick
 	{
 		objName = 'v_ilev_gb_vaubar',
@@ -286,9 +286,9 @@ Config.DoorList = {
 	{
 		textCoords = vec3(444.71, -989.43, 30.92),
 		authorizedJobs = { 'police' },
-		locked = true,
+		locked = false,
 		pickable = false,
-		distance = 2.0,
+		distance = 6.0,
 		doors = {
 			{
 				objName = 'v_ilev_ph_gendoor005',
@@ -390,7 +390,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 14
+		distance = 6
 	},
 	-- Mission Row Extension
 	-- Briefing room
@@ -839,7 +839,7 @@ Config.DoorList = {
 		authorizedJobs = { 'police' },
 		locked = true,
 		pickable = false,
-		distance = 1.5
+		distance = 10
 	},
 	-- To CheckingRoomFromCheck
 	{
@@ -870,7 +870,7 @@ Config.DoorList = {
 		objCoords  = vec3(1791.18, 2593.11, 546.15),
 		textCoords = vec3(1791.18, 2593.11, 546.15),
 		authorizedJobs = { 'police' },
-		locked = true,
+		locked = false,
 		pickable = false,
 		distance = 2.0
 	},
